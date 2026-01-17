@@ -9,8 +9,8 @@ public class Exercise3 {
         Scanner sc = new Scanner(System.in);
 
         String name;
-        int n, age, countLessThan16 = 0;
-        double height, mediumHeight = 0, percentageUnder16;
+        int n, age, countUnder16 = 0;
+        double height, mediumHeight = 0;
 
         System.out.print("How many people will be inserted? ");
         n = sc.nextInt();
@@ -27,14 +27,14 @@ public class Exercise3 {
             array[i] = new Ex3person(name, age, height);
             mediumHeight += height;
             if(age < 16){
-                countLessThan16++;
+                countUnder16++;
             }
         }
 
         mediumHeight = mediumHeight/array.length;
         System.out.printf("Medium Height: %.2f\n", mediumHeight);
-        percentageUnder16 = (double)(countLessThan16/array.length)*100;
-        System.out.printf("People with age lesser than 16: %.2f %%\n", percentageUnder16);
+        double percentageUnder16 = (countUnder16 * 100) / array.length;
+        System.out.printf("People under 16: %.2f %%\n", percentageUnder16);
         for(Ex3person p : array){
             if(p.isUnder16()){
                 System.out.println(p.getName());
