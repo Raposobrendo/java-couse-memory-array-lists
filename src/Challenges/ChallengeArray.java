@@ -1,4 +1,4 @@
-package exercises;
+package Challenges;
 
 import java.util.Locale;
 import java.util.Scanner;
@@ -11,7 +11,7 @@ public class ChallengeArray {
         int n, room;
         String name, email;
 
-        ChallengeEntity[] rooms = new ChallengeEntity[10];
+        ChallengeArrayEntity[] rooms = new ChallengeArrayEntity[10];
         System.out.print("How many rooms will be rented? (ten rooms available, 0 to 9): ");
         n = sc.nextInt();
         while(n < 1 || n > 10){
@@ -27,10 +27,10 @@ public class ChallengeArray {
             email = sc.nextLine();
             System.out.print("Room: ");
             room = sc.nextInt();
-            rooms[room] = new ChallengeEntity(name, email, room);
+            rooms[room] = new ChallengeArrayEntity(name, email, room);
         }
 
-        for (ChallengeEntity challengeEntity : rooms) {
+        for (ChallengeArrayEntity challengeEntity : rooms) {
             if (challengeEntity != null)
                 System.out.println(challengeEntity);
         }

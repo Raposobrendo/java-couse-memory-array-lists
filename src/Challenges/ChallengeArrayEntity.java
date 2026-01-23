@@ -1,11 +1,11 @@
-package exercises;
+package Challenges;
 
-public class ChallengeEntity {
+public class ChallengeArrayEntity {
      private String name;
      private String email;
      private int room;
 
-    public ChallengeEntity(String name, String email, int room) {
+    public ChallengeArrayEntity(String name, String email, int room) {
         this.name = name;
         this.email = email;
         this.room = room;
