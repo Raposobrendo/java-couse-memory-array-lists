@@ -14,9 +14,14 @@ public class ArrayList1 {
         list.add("Nicolas");
         list.add("Luna");
         list.add("Ana");
+        list.add(2, "Juau");
 
-        System.out.println(list);
-
+        for(String i : list){
+            System.out.println(i);
+        }
+        System.out.println("------------------------------");
+        list.remove(4);
+        list.removeIf(x -> x.charAt(0) == 'L');
         for(String i : list){
             System.out.println(i);
         }
