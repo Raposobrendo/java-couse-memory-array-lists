@@ -31,7 +31,6 @@ public class ChallengeArrayList {
             System.out.print("Salary: ");
             double salary = sc.nextDouble();
             employees.add(new ArrayListEmployees(id, name, salary));
-
         }
 
 

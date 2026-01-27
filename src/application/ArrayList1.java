@@ -26,7 +26,7 @@ public class ArrayList1 {
 
         System.out.println("------------------------------");
         list.remove(5);
-        list.removeIf(x -> x.charAt(0) == 'L');
+        list.removeIf(x -> x.charAt(0) == 'C');
         for(String i : list){
             System.out.println(i);
         }
