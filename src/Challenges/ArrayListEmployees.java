@@ -11,10 +11,6 @@ public class ArrayListEmployees {
         this.salary = salary;
     }
 
-    public void setId(int id){
-        this.id = id;
-    }
-
     public int getId(){
         return id;
     }
@@ -33,5 +29,9 @@ public class ArrayListEmployees {
 
     public void increaseSalary(double increase){
         salary *= 1 + (increase/100);
+    }
+
+    public String toString(){
+        return id + ", " + name + ", " + String.format("%.2f", salary);
     }
 }
